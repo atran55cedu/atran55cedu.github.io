@@ -1,0 +1,18 @@
+header {
+    font-family: "Open Sans", sans-serif;
+    text-align: center;
+    margin: auto, 0;
+    background: rgb(88, 88, 246);
+}
+
+h2 {
+    display: inline-block;
+    align: center;
+    text-align: center;
+    background-color: aquamarine;
+    max-width: auto;
+}
+
+p {
+    background-color: cadetblue;
+}
