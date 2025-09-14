@@ -22,6 +22,20 @@ body {
     padding: 0;
 }
 
+footer {
+    margin: 0px;
+    padding: 10px;
+    background-color: var(--midnight-green);
+    text-align: center;
+}
+
+footer a {
+    margin: 0px;
+    padding: 5px 10px;
+    background-color: var(--emerald);
+    border-radius: 7px;
+}
+
 /* ====================
     Typography
 ==================== */
@@ -76,7 +90,7 @@ h2 {
 }
 
 .container {
-    margin: 0px auto;
+    margin: 10px auto;
     padding: 3px 10px;
     max-width: 500px;
     background-color: #2cb6f1;
