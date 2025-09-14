@@ -1,57 +1,77 @@
-/* 
-Color Palette
-    #7289da - Blue
-    #ffffff - White
-    #99aab5 - Grey
-    #2c2f33 - Darker Grey
-    #23272a - Darkest Grey
-*/
-
-body {
-    background-color: #2c2f33;
+/* ====================
+    Color Palette (Variables)
+==================== */
+:root {
+    --blue: #7289da;
+    --white: #ffffff;
+    --grey: #99aab5;
+    --dark-grey: #2c2f33;
+    --darker-grey: #23272a;
+    --visited-blue: #283ed7;
 }
 
-#main-header {
-    font-family: "Open Sans", sans-serif;
-    background-color: #23272a;
-    color: #7289da;
-    text-align: center;
+/* ====================
+    Base Styles
+==================== */
+body {
     margin: 0;
-    padding: 5px 10px 5px;
+    background-color: var(--dark-grey);
+    font-family: "Open Sans", sans-serif;
 }
 
 h2 {
     display: inline-block;
-    color: #ffffff;
     text-align: center;
-    max-width: auto;
+    color: var(--white);
+  max-width: auto; /* consider removing, 'auto' is default */
 }
 
 p {
-    color: #99aab5;
-}
-
-b {
-    color: #ffffff;
+    color: var(--grey);
 }
 
 hr {
-    color: white;
-    border-color: white;
-    background-color: white;
+    border: none;
+    height: 1px;
+    background-color: var(--white);
+}
+
+/* ====================
+    Layout
+==================== */
+#main-header {
+    margin: 0;
+    padding: 5px 10px;
+    text-align: center;
+    
+    color: var(--blue);
+    background-color: var(--darker-grey);
 }
 
 #about-me {
     margin-left: 50px;
 }
 
+/* ====================
+    Components
+==================== */
 a {
-    background-color: #99aab5;
+    background-color: var(--grey);
+  text-decoration: none; /* optional, removes underline */
 }
+
 a:hover {
-    color: white;
+    color: var(--white);
 }
 
 a:visited {
-    color: #283ed7;
+    color: var(--visited-blue);
+}
+
+/* ====================
+    Utilities
+==================== */
+.highlight {
+    font-weight: bold;
+    color: var(--white);
 }
