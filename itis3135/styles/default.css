@@ -1,77 +1,98 @@
 /* ====================
-    Color Palette (Variables)
+    Variables
 ==================== */
 :root {
-    --blue: #7289da;
-    --white: #ffffff;
-    --grey: #99aab5;
-    --dark-grey: #2c2f33;
-    --darker-grey: #23272a;
-    --visited-blue: #283ed7;
+    --blue-ncs: #2cb6f1;
+    --emerald: #06d6a0ff;
+    --bright-pink-crayola: #ef476fff;
+    --sunglow: #ffd166ff;
+    --midnight-green: #002232;
+
+    --text-light: #f9f9f9;
 }
 
 /* ====================
     Base Styles
 ==================== */
 body {
+    background-color: #043146;
+    font-family: 'Open Sans', Arial, sans-serif;
+    color: var(--text-light);
     margin: 0;
-    background-color: var(--dark-grey);
-    font-family: "Open Sans", sans-serif;
-}
-
-h2 {
-    display: inline-block;
-    text-align: center;
-    color: var(--white);
-  max-width: auto; /* consider removing, 'auto' is default */
-}
-
-p {
-    color: var(--grey);
-}
-
-hr {
-    border: none;
-    height: 1px;
-    background-color: var(--white);
+    padding: 0;
 }
 
 /* ====================
-    Layout
+    Typography
 ==================== */
-#main-header {
-    margin: 0;
-    padding: 5px 10px;
-    text-align: center;
+h2 {
     
-    color: var(--blue);
-    background-color: var(--darker-grey);
 }
 
-#about-me {
-    margin-left: 50px;
+/* ====================
+    Layout - Banner
+==================== */
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    margin: 0px;
+    padding-left: 10%;
+    background-color: var(--midnight-green);
+}
+
+.banner {
+    color: var(--blue-ncs);
+}
+
+.banner-nav {
+    text-align: right;
+}
+
+.banner-nav a {
+    margin: 10px;
+    padding: 5px 10px;
+    background-color: var(--emerald);
+    border-radius: 7px;
+}
+
+.profile-img {
+    width: 100px;
+    vertical-align: middle;
+}
+
+/* ====================
+    Layout - Body
+==================== */
+.main-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#welcome {
+    margin: 20px auto;
+    text-align: center;
+}
+
+.container {
+    margin: 0px auto;
+    padding: 3px 10px;
+    max-width: 500px;
+    background-color: #2cb6f1;
+    border-radius: 5px;
 }
 
 /* ====================
     Components
 ==================== */
 a {
-    background-color: var(--grey);
-  text-decoration: none; /* optional, removes underline */
-}
-
-a:hover {
-    color: var(--white);
-}
-
-a:visited {
-    color: var(--visited-blue);
+    text-decoration: none;
 }
 
 /* ====================
     Utilities
 ==================== */
-.highlight {
-    font-weight: bold;
-    color: var(--white);
-}
+.bold { font-size: 1.2rem; }
+.center { text-align: center;}
+
