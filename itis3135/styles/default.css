@@ -90,6 +90,12 @@ a {
     text-decoration: none;
 }
 
+a:hover {
+    color: black;
+    background-color: var(--sunglow);
+    box-shadow: 6px 6px 9px black;
+}
+
 /* ====================
     Utilities
 ==================== */
