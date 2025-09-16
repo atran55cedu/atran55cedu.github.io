@@ -24,17 +24,16 @@ body {
 
 footer {
     margin: 0px;
-    padding: 10px;
+    /* padding-bottom: 20px; */
     background-color: var(--midnight-green);
     text-align: center;
     position: fixed;
-    left: 0;
     bottom: 0;
     width: 100%;
 }
 
 footer a {
-    margin: 0px;
+    margin-bottom: 10px;
     padding: 5px 10px;
     background-color: var(--emerald);
     border-radius: 7px;
@@ -95,7 +94,7 @@ h2 {
 
 .container {
     margin: 10px auto;
-    padding: 3px 10px;
+    padding: 5px 20px;
     max-width: 500px;
     background-color: #2cb6f1;
     border-radius: 5px;
@@ -109,14 +108,25 @@ a {
 }
 
 a:hover {
-    color: black;
+    border-radius: 7px;
+    color: black !important;
     background-color: var(--sunglow);
-    box-shadow: 6px 6px 9px black;
+    box-shadow: 3px 4px 10px black;
+}
+
+a:visited {
+    color: inherit;
 }
 
 /* ====================
     Utilities
 ==================== */
-.bold { font-size: 1.2rem; }
-.center { text-align: center;}
+.bold { 
+    font-size: 1.2em;
+    font-weight: bold; 
+}
+
+.center { 
+    text-align: center;
+}
 
