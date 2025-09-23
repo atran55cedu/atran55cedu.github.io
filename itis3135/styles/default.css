@@ -3,10 +3,10 @@
 ==================== */
 :root {
     --blue-ncs: #2cb6f1;
-    --emerald: #06d6a0ff;
-    --bright-pink-crayola: #ef476fff;
-    --sunglow: #ffd166ff;
-    --midnight-green: #002232;
+    --link: #06d6a0ff;
+    --call_to_action: #ef476fff;
+    --hover: #ffd166ff;
+    --background: #002232;
 
     --text-light: #f9f9f9;
 }
@@ -19,13 +19,15 @@ body {
     font-family: 'Open Sans', Arial, sans-serif;
     color: var(--text-light);
     margin: 0;
+    margin-bottom: 10px;
     padding: 0;
 }
 
 footer {
-    margin: 0px;
+    /* margin: 0px; */
+    margin-bottom: 20px;
     /* padding-bottom: 20px; */
-    background-color: var(--midnight-green);
+    background-color: var(--background);
     text-align: center;
     position: fixed;
     bottom: 0;
@@ -33,9 +35,9 @@ footer {
 }
 
 footer a {
-    margin-bottom: 10px;
+    margin-bottom: 100px;
     padding: 5px 10px;
-    background-color: var(--emerald);
+    background-color: var(--link);
     border-radius: 7px;
 }
 
@@ -43,7 +45,7 @@ footer a {
     Typography
 ==================== */
 h2 {
-    
+    margin-bottom: 8px;
 }
 
 /* ====================
@@ -56,7 +58,7 @@ h2 {
     height: 80px;
     margin: 0px;
     padding-left: 10%;
-    background-color: var(--midnight-green);
+    background-color: var(--background);
 }
 
 .banner {
@@ -70,7 +72,7 @@ h2 {
 .banner-nav a {
     margin: 10px;
     padding: 5px 10px;
-    background-color: var(--emerald);
+    background-color: var(--link);
     border-radius: 7px;
 }
 
@@ -109,8 +111,8 @@ a {
 
 a:hover {
     border-radius: 7px;
-    color: black !important;
-    background-color: var(--sunglow);
+    color: black;
+    background-color: var(--hover);
     box-shadow: 3px 4px 10px black;
 }
 
