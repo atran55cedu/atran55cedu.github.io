@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Fantasy XIV</title>
+
+    <style>
+        /*  Embedded Stylesheet  */
+        body {
+            font-family: "Poppins", Arial, sans-serif;
+            margin: 0;
+            background-color: #1a1a2e;
+            color: #eaeaea;
+            text-align: center;
+            background: url(images/FFXIV_main_banner.jpg) no-repeat center fixed;
+        }
+
+        header,
+        footer {
+            background-color: #16213e;
+            color: #f1f1f1;
+            padding: 1rem;
+        }
+
+        h1,
+        h2 {
+            color: #f9d342;
+            text-shadow: 1px 1px 2px black;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #e94560;
+            font-weight: bold;
+            padding: 0.5rem;
+        }
+
+        nav a:hover {
+            color: #f9d342;
+        }
+
+        main {
+            padding: 2rem;
+        }
+
+        section {
+            display: none;
+            background: #0f3460;
+            border-radius: 12px;
+            max-width: 800px;
+            margin: auto;
+            padding: 1.5rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        section.active {
+            display: block;
+        }
+
+        figure {
+            margin: 1.5rem auto;
+        }
+
+        figcaption {
+            font-style: italic;
+            color: #cfcfcf;
+            font-size: 0.9rem;
+        }
+
+        table {
+            width: 80%;
+            margin: 1rem auto;
+            border-collapse: collapse;
+            background-color: #1a1a2e;
+            color: #f1f1f1;
+        }
+
+        th,
+        td {
+            border: 1px solid #f9d342;
+            padding: 0.5rem;
+        }
+
+        /*  Slideshow Styling  */
+        .slideshow {
+            position: relative;
+            max-width: 700px;
+            margin: 1.5rem auto;
+        }
+
+        .slide {
+            display: none;
+        }
+
+        .slide img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .slide.active {
+            display: block;
+        }
+
+        .prev,
+        .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            border: none;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            font-size: 0.9rem;
+            margin-top: 2rem;
+            width: 100%;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Final Fantasy XIV</h1>
+        <nav>
+            <a href="#" onclick="showSection('what')">🏠 What</a> |
+            <a href="#" onclick="showSection('who')">👤 Who</a> |
+            <a href="#" onclick="showSection('when')">📅 When</a> |
+            <a href="#" onclick="showSection('where')">📍 Where</a> |
+            <a href="#" onclick="showSection('how')">⚙️ How</a> |
+            <a href="#" onclick="showSection('why')">💡 Why</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- WHAT -->
+        <section id="what">
+            <h2>What is FFXIV?</h2>
+            <p>Final Fantasy XIV is a massive online multiplayer RPG where players explore the world of Eorzea, complete
+                quests, dungeons, raids, or just sit around talking to other players.</p>
+            <p>As like most Final Fantasy games, the story is what keeps you coming back, and it's not different here.
+                Many players even decide not to interact with the MMO aspect and play the game solely for how rich the story and world are.
+            </p>
+
+            <!-- Slideshow -->
+            <div class="slideshow" data-index="0">
+                <div class="slide active"><img src="images/FFXIV_main_banner.jpg"
+                        alt="Main banner of Final Fantasy 14"></div>
+                <div class="slide"><img src="images/ffxiv_free_trial_meme.jpg"
+                        alt="Final Fantasy 14 free trial meme"></div>
+                <button class="prev" onclick="plusSlide(this, -1)">&#10094;</button>
+                <button class="next" onclick="plusSlide(this, 1)">&#10095;</button>
+            </div>
+
+            <p>The game features multiple jobs/classes that you can play all on a single character.
+                Where most other games would require you to make a new character for each class.
+            </p>
+        </section>
+
+        <!-- WHO -->
+        <section id="who">
+            <h2>Who We Are</h2>
+            <p>We’re the <strong>Echo Wardens</strong>, a Free Company on the Aether Data Center that loves raids,
+                crafting, and community events.</p>
+
+            <figure>
+                <img src="https://via.placeholder.com/600x300?text=Free+Company+Group+Photo"
+                    alt="Group of players in FFXIV">
+                <figcaption>Our Free Company gathered for raid night.</figcaption>
+            </figure>
+
+            <table>
+                <tr>
+                    <th>Member</th>
+                    <th>Role</th>
+                </tr>
+                <tr>
+                    <td>Andy</td>
+                    <td>Raid Leader</td>
+                </tr>
+                <tr>
+                    <td>Mai</td>
+                    <td>Healer</td>
+                </tr>
+                <tr>
+                    <td>Taro</td>
+                    <td>Tank</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- WHEN -->
+        <section id="when">
+            <h2>When to Play</h2>
+            <p>FFXIV events happen year-round, but the best times are during patch releases and seasonal events like the
+                Moonfire Faire.</p>
+
+            <figure>
+                <img src="https://via.placeholder.com/600x300?text=Seasonal+Event" alt="FFXIV festival">
+                <figcaption>Participating in the Moonfire Faire festival.</figcaption>
+            </figure>
+
+            <table>
+                <tr>
+                    <th>Event</th>
+                    <th>Time of Year</th>
+                </tr>
+                <tr>
+                    <td>Moonfire Faire</td>
+                    <td>Summer</td>
+                </tr>
+                <tr>
+                    <td>Starlight Celebration</td>
+                    <td>Winter</td>
+                </tr>
+                <tr>
+                    <td>Valentione’s Day</td>
+                    <td>February</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- WHERE -->
+        <section id="where">
+            <h2>Best Places in Eorzea</h2>
+            <p>Some of the areas where I had to stop and take screenshots.</p>
+
+            <!-- Slideshow -->
+            <div class="slideshow" data-index="0">
+                <div class="slide active"><img src="images/ffxiv_1.JPG" alt="FFXIV Limsa Lominsa"></div>
+                <div class="slide"><img src="images/20251016220719_1.jpg" alt="FFXIV Limsa Lominsa"></div>
+                <div class="slide"><img src="images/20251016220738_1.jpg" alt="FFXIV Limsa Lominsa"></div>
+                <div class="slide"><img src="images/20251016220849_1.jpg" alt="FFXIV Limsa Lominsa"></div>
+                <div class="slide"><img src="images/20251016215858_1.jpg" alt="FFXIV Ul'Dah"></div>
+                <div class="slide"><img src="images/20251016220525_1.jpg" alt="FFXIV Camp Bronzelake"></div>
+                <div class="slide"><img src="images/20251016220544_1.jpg" alt="FFXIV Camp Bronzelake"></div>
+                <div class="slide"><img src="images/20251016221313_1.jpg" alt="FFXIV Dock Poga"></div>
+                <div class="slide"><img src="images/20251016221340_1.jpg" alt="FFXIV Dock Poga"></div>
+                <button class="prev" onclick="plusSlide(this, -1)">&#10094;</button>
+                <button class="next" onclick="plusSlide(this, 1)">&#10095;</button>
+            </div>
+
+            <p>I would've included more areas, but I wanted to keep it spoiler free.</p>
+        </section>
+
+        <!-- HOW -->
+        <section id="how">
+            <h2>How to Get Started</h2>
+            <p>Download the game from the official Square Enix site or Steam. Start your adventure with a free trial up
+                to level 70!</p>
+
+            <figure>
+                <img src="https://via.placeholder.com/600x300?text=Character+Creation" alt="Character creation screen">
+                <figcaption>Designing your character before the journey begins.</figcaption>
+            </figure>
+
+            <p>Join a Free Company, try different jobs, and progress through the Main Story Quest (MSQ).</p>
+        </section>
+
+        <!-- WHY -->
+        <section id="why">
+            <h2>Why I Love FFXIV</h2>
+            <p>FFXIV stands out for its emotional storylines, kind community, and endless creative freedom. It’s more
+                than a game — it’s a shared journey.</p>
+
+            <figure>
+                <img src="https://via.placeholder.com/600x300?text=Raid+Boss+Fight" alt="Raid boss fight">
+                <figcaption>Our raid group taking down a primal boss together.</figcaption>
+            </figure>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 FFXIV Hobby Project | Created for Front-End Web Dev</p>
+    </footer>
+
+    <script>
+        // === Hide/Show Section Function ===
+        function showSection(id) {
+            document.querySelectorAll("main section").forEach(sec => sec.classList.remove("active"));
+            document.getElementById(id).classList.add("active");
+        }
+
+        window.onload = () => showSection("what");
+
+        // === Slideshow Functionality ===
+        function plusSlide(button, n) {
+            const slideshow = button.parentElement;
+            const slides = slideshow.querySelectorAll(".slide");
+            let index = parseInt(slideshow.getAttribute("data-index"));
+
+            slides[index].classList.remove("active");
+            index = (index + n + slides.length) % slides.length;
+            slides[index].classList.add("active");
+
+            slideshow.setAttribute("data-index", index);
+        }
+    </script>
+</body>
+
+</html>
