@@ -8,10 +8,10 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tenor+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
     <style>
-        /* https://coolors.co/606dce-374470-3e506f-1e6fc0-edeef4 */
+        /* Theme Palette */
         :root {
             --background-color: rgb(96, 109, 206);
             --foreground-color: #364958;
@@ -23,166 +23,191 @@
         * {
             margin: 0;
             box-sizing: border-box;
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: 'Poppins', sans-serif;
         }
 
         body {
             background-color: var(--background-color);
             color: var(--text-light);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            /* min-height: 100vh; */
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto 1fr auto;
+            min-height: 100vh;
         }
 
         header {
-            width: 100%;
+            /* spans all three columns */
+            grid-column: 1 / -1;
             display: flex;
             align-items: center;
-            padding: 10px 20px;
+            padding: 15px 25px;
             background-color: var(--foreground-color);
-            color: white;
         }
 
-        header h1 {
-            font-family: 'Poppins';
-        }
-
-        .logo img {
-            width: 30px;
-            height: 30px;
+        header img {
+            width: 40px;
+            height: 40px;
             margin-right: 15px;
             border-radius: 4px;
         }
 
+        h1 {
+            font-size: 1.6rem;
+            font-weight: 600;
+        }
+
         main {
+            grid-column: 1 / -1;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: auto auto auto;
+            grid-auto-rows: minmax(180px, auto);
             gap: 20px;
-            width: 80%;
-            max-width: 900px;
-            margin: 100px auto;
+            padding: 50px;
+            text-align: left;
+        }
+
+        h2 {
+            grid-column: 1 / -1;
+            font-size: 2rem;
             text-align: center;
+            margin-bottom: 1px;
+            text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
         }
 
-        .hero-text {
-            width: 100vw;
-            margin-left: calc(-50vw + 50%);
-            grid-column: 1 / -1;
-            font-size: 3rem;
-            font-weight: bold;
-            margin-bottom: 10px;
-            text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.3);
-        }
-
-        .description {
-            grid-column: 1 / -1;
-            font-size: 1.1rem;
-            line-height: 1.6;
-            background-color: var(--description-color);
-            border-radius: 8px;
-        }
-
-        .service-list {
-            grid-column: 1 / -1;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 15px;
-            margin-top: 20px;
-        }
-
+        /* Each row: left = service, right = text area */
         .service {
-            background-color: rgba(0, 0, 0, 0.2);
-            padding: 20px;
-            border-radius: 8px;
+            display: flex;
+            grid-column: 1 / 2;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.25);
             border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            padding: 20px;
+            font-size: 2rem;
+            font-weight: 600;
+            text-align: center;
+            transition: 0.4s ease;
         }
 
         .service:hover {
-            transform: scale(1.1);
-            transition: 1s ease;
-            box-shadow: 1px 2px 5px black;
+            transform: scale(1.05);
             background-color: var(--hover-color);
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .text-block {
+            grid-column: 2 / 4;
+            background-color: var(--description-color);
+            border-radius: 8px;
+            padding: 20px;
+            font-size: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .amazing-things {
+            list-style-type: "★ ";
+            margin-top: 10px;
+            padding-left: 25px;
+        }
+
+        .amazing-things li {
+            margin-bottom: 8px;
         }
 
         .contact-info {
-            grid-column: 2 / 3;
+            grid-column: 2 / 4;
             background-color: rgba(0, 0, 0, 0.3);
-            padding: 20px;
             border-radius: 8px;
+            padding: 20px;
             line-height: 1.8;
-            margin-top: 10px;
         }
 
-        .contact-info h3 {
-            font-family: 'Poppins';
+        /* .contact-info h3 {
             margin-bottom: 10px;
-        }
-
-        .contact-info a {
-            color: var(--text-light);
-            text-decoration: none;
-        }
-
-    
-        .contact-info a:hover {
-            background-color: var(--hover-color);
-            border-radius: 5px;
-        }
+        } */
 
         footer {
-            width: 100%;
+            grid-column: 1 / -1;
+            background-color: var(--foreground-color);
             text-align: center;
-            margin-top: auto;
             padding: 20px;
             font-size: 0.9rem;
-            background-color: var(--foreground-color);
         }
     </style>
+
 </head>
 
 <body>
+    <!-- Site text is generated through chatGPT 5 -->
     <header>
-        <div class="logo">
-            <img src="logo.png" alt="">
-        </div>
-        <h1>Andy Tran Solutions</h1>
+        <img src="logo.png" alt="Company Logo">
+        <h1>Andy Tran Solutions - Building Better Digital Experiences</h1>
     </header>
 
     <main>
-        <h2 class="hero-text">Solutions Tailored to You</h2>
+        <h2>Andy Tran Solutions' Services</h2>
 
-        <p class="description">
-            At Andy Tran Solutions, we focus on building fast, reliable, and secure web systems that just work.
-            Whether it’s designing clean interfaces, optimizing performance, or developing custom features,
-            every solution is made to be efficient, maintainable, and built for long-term use.
-        </p>
-
-        <div class="service-list">
-            <div class="service">Custom Web Development</div>
-            <div class="service">UI/UX Design Consultation</div>
-            <div class="service">Performance Optimization</div>
-            <div class="service">Responsive Design Implementation</div>
-            <div class="service">Ongoing Support & Maintenance</div>
+        <div class="service">Web Development</div>
+        <div class="text-block">
+            We specialize in developing secure, scalable, and fast websites tailored to your exact business needs. Every
+            project combines functionality with user-focused design.
         </div>
 
-        <p class="description">
-            I’d love to collaborate with you to bring your ideas to life—whether you’re launching a new product, refining your online presence, or improving system performance. Every project is a partnership built on trust, clarity, and a shared goal: delivering impactful results that last.
-        </p>
+        <div class="service">UI/UX Design</div>
+        <div class="text-block">
+            Our design philosophy is simple: intuitive layouts that guide users effortlessly. We create experiences that
+            are both elegant and effective.
+        </div>
 
+        <div class="service">Performance Optimization</div>
+        <div class="text-block">
+            Speed matters. We fine-tune code, compress assets, and improve SEO performance metrics to ensure every site
+            feels lightning-fast.
+        </div>
+
+        <div class="service">Ongoing Support</div>
+        <div class="text-block">
+            Our clients are long-term partners. Whether it’s updates, maintenance, or scaling for growth, we’re here for
+            every phase of your business.
+        </div>
+
+        <div class="service">About Us</div>
+        <div class="text-block">
+            Andy Tran Solutions delivers reliable, efficient, and future-ready web systems for startups, organizations,
+            and creative professionals.
+            <ul class="amazing-things">
+                <li>Tailored digital strategies</li>
+                <li>Performance-optimized solutions</li>
+                <li>Modern, accessible design</li>
+                <li>Transparent communication</li>
+                <li>Ongoing client support</li>
+                <li>Fast project turnaround</li>
+                <li>Results-driven mindset</li>
+            </ul>
+        </div>
+
+        <div class="service">Let's Work Together</div>
+        <div class="text-block">
+            I’d love to help bring your ideas to life. From design to deployment, we create solutions built on trust,
+            clarity, and innovation.
+        </div>
+
+        <div class="service">Contact</div>
         <div class="contact-info">
-            <h3 >Get in Touch</h3>
-            <p>contact@atran.site</a></p>
+            <h3>Get in Touch</h3>
+            <p>Email: contact@atran.site</p>
             <p>Phone: (704) 392-4172</p>
             <p>Address: 412 Silverpine Drive, Charlotte, NC 28277</p>
         </div>
-
     </main>
 
     <footer>
-        <p>© 2025 Andy Tran Solutions</p>
+        <p>© 2025 Andy Tran Solutions — Building Better Digital Experiences</p>
     </footer>
+
+    <!-- ACCUMULUS -->
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
