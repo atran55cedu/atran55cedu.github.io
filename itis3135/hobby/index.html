@@ -80,6 +80,12 @@
             border-radius: 5px;
         }
 
+        img[class~="img_link"]:hover {
+            transform: scale(1.1);
+            transition: 1s ease-out;
+            box-shadow: 0 0 2px black;
+        }
+
         figcaption {
             font-style: italic;
             color: #cfcfcf;
@@ -249,7 +255,7 @@
                 </tr>
                 <tr>
                     <td>Random Person</td>
-                    <td>Honestly, no clue what they're doing</td>
+                    <td>No clue what they're doing right now</td>
                 </tr>
                 <tr>
                     <td>Random Person 2</td>
@@ -331,7 +337,7 @@
             <p>Download the game from either the official Square Enix site or Steam.</p>
 
             <figure>
-                <img src="images/ffxiv_steam_download.png" alt="Picture of FFXIV Steam free trial download button">
+                <a href="https://store.steampowered.com/app/39210/FINAL_FANTASY_XIV_Online/" target="_blank"><img class="img_link" src="images/ffxiv_steam_download.png" alt="Picture of FFXIV Steam free trial download button"></a>
                 <figcaption>This used to not be a button and was hidden away on Steam.</figcaption>
             </figure>
 
