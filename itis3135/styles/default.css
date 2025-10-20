@@ -1,124 +1,38 @@
-/* ====================
-    Variables
-==================== */
 :root {
     --blue-ncs: #2cb6f1;
     --link: #06d6a0ff;
     --call_to_action: #ef476fff;
     --hover: #ffd166ff;
-    --background: #002232;
+    --background-color: #002232;
 
     --text-light: #f9f9f9;
 }
 
-/* ====================
-    Element Styles
-==================== */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 80px;
-    margin: 0px;
-    padding-left: 10%;
-    background-color: var(--background);
-}
-
-body {
-    background-color: #043146;
-    font-family: 'Open Sans', Arial, sans-serif;
-    color: var(--text-light);
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-footer {
-    background-color: var(--background);
-    text-align: center;
-    position: fixed;
-    bottom: 0;
+.mascot__img {
+    height: 80px;
+}
+
+header {
+    display: flex;
     width: 100%;
-    margin-top: 10px;
-    padding-bottom: 20px;
+    height: auto;
+    margin-bottom: 2rem;
+    /* Styling */
+    background: var(--background-color);
 }
 
-footer a {
-    margin-bottom: 100px;
-    padding: 5px 10px;
-    background-color: var(--link);
-    border-radius: 7px;
+.banner-img-name {
+    justify-content: flex-start;
 }
 
-/* ====================
-    Layout
-==================== */
-.profile-img {
-    width: 100px;
-    vertical-align: middle;
-}
-
-.banner {
-    color: var(--blue-ncs);
-}
-
-.banner-nav {
-    text-align: right;
-    margin-right: 3%;
-}
-
-.banner-nav a {
-    margin: 10px;
-    padding: 5px 10px;
-    background-color: var(--link);
-    border-radius: 7px;
-}
-
-
-/* ====================
-    Layout - Body
-==================== */
-.container {
-    margin: 10px auto;
-    padding: 5px 20px;
-    max-width: 500px;
-    background-color: #2cb6f1;
-    border-radius: 5px;
-}
-
-blockquote p::before {
-    content: "\201C";
-}
-
-blockquote p::after {
-    content: "\201D";
-}
-
-/* ====================
-    Components
-==================== */
-a {
-    text-decoration: none;
-}
-
-a:hover {
-    border-radius: 7px;
-    color: black;
-    background-color: var(--hover);
-    box-shadow: 3px 4px 10px black;
-}
-
-a:visited {
-    color: inherit;
-}
-
-/* ====================
-    Utilities
-==================== */
-.bold {
-    font-size: 1.1rem;
-    font-weight: bold;
-}
-
-.center {
-    text-align: center;
+header nav[class~="banner-nav"] {
+    display: flex;
+    justify-content: flex-end;
+    /* display: grid; */
 }
