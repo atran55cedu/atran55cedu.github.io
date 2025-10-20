@@ -1,6 +1,0 @@
-Do something like this for headers and footers:
-    <div data-include="value">
-
-WET DRY
-    Write Every Twice
-    Dont Repeat Yourself
