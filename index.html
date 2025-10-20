@@ -1,17 +1,7 @@
-<!-- ! Notes from Class
-    - Title should be possesive
-    - Shouldn't have random repeition
-    - Class page should be in a different place
-        a) 2 menus: 1 for links about the same content as the site. 2 for external links like the 
-    - ADD: Header and Footer to components folder so I don't have to change them one by one
-    -    -->
-
-<!-- *TODO:
-        Change this pages header for line 35-->
-
 <!-- HOME PAGE -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,7 +13,9 @@
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Tenor+Sans&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Tenor+Sans&display=swap"
+        rel="stylesheet">
 
     <!-- CSS -->
     <!-- ! Need to change to embedded stylesheet -->
@@ -32,14 +24,15 @@
 
 <body>
     <header id="header">
-        <h1 class="banner"><a href="./index.html"><img class="profile-img"
-        src="itis3135/images/mascot.png" alt="Tiger roaring facing viewer head on">Andy Tran</a></h1>
+        <div data-include="/itis3135/components/header.html"></div>
+        <!-- <h1 class="banner"><a href="./index.html"><img class="profile-img" src="itis3135/images/mascot.png"
+                    alt="Tiger roaring facing viewer head on">Andy Tran</a></h1>
 
         <nav class="banner-nav">
             <a href="./index.html">Home</a>
             <a href="itis3135/index.html">ITIS 3135</a>
             <a href="itis3135/contract.html">Contract</a>
-        </nav>
+        </nav> -->
     </header>
 
     <div class="main-wrapper">
@@ -56,19 +49,19 @@
             <section id="classes" class="container">
                 <h2 class="center bold">Current Courses</h2>
                 <hr>
-                <p class="course">ITIS 3135 - Front End Web Development 
+                <p class="course">ITIS 3135 - Front End Web Development
                     <br>
                     <a href="itis3135/">Click to go to my course page!</a>
                 </p>
             </section>
-            
-        
-            
+
         </main>
     </div>
-    
+
     <footer>
-        <p>Designed by <a href="itis3135/atran.site/index.html">AT Solutions</a> © 2025</p>
+        <div data-include="/itis3135/components/footer.html"></div>
+
+        <!-- <p>Designed by <a href="itis3135/atran.site/index.html">AT Solutions</a> © 2025</p>
         <nav id="footer-links">
             <a href="https://webpages.charlotte.edu/atran55/" target="_blank">CLT Web</a>
             <a href="https://github.com/atran55cedu/atran55cedu.github.io" target="_blank">GitHub</a>
@@ -76,7 +69,9 @@
             <a href="https://www.freecodecamp.org/atran55uncc" target="_blank">freeCodeCamp</a>
             <a href="https://www.codecademy.com/profiles/data1819022923" target="_blank">Codecademy</a>
             <a href="https://www.linkedin.com/in/andy-tran-748075184/">LinkedIn</a>
-        </nav>
+        </nav> -->
     </footer>
+    <script src="/itis3135/scripts/HTMLInclude.js"></script>
 </body>
+
 </html>
