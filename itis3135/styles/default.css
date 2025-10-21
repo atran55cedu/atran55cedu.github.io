@@ -18,8 +18,9 @@
     height: 80px;
 }
 
+/*! No clue what to change, but the gap between the logo-Name and the top of the page are too big */
+
 header {
-    display: flex;
     width: 100%;
     height: auto;
     margin-bottom: 2rem;
@@ -27,12 +28,25 @@ header {
     background: var(--background-color);
 }
 
-.banner-img-name {
-    justify-content: flex-start;
+h1 {
+    min-width: 500px;
+    text-align: center;
+    margin: 0 auto; /* This centers the h1 block */
+    font-family: 'Neuton';
+}
+
+h1 img {
+    position: relative;
+    top: 30px;
 }
 
 header nav[class~="banner-nav"] {
     display: flex;
-    justify-content: flex-end;
-    /* display: grid; */
+    justify-content: space-evenly; /* This centers the flex items */
+    align-items: center; /* This centers items vertically */
+    flex-wrap: wrap;
+    padding: 15px;
+    /* border: 2px solid white; */
+    max-width: 70vw; /* Optional: adds a max-width */
+    margin: 0 auto; /* Centers the nav element itself */
 }
