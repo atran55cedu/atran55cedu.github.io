@@ -1,209 +1,76 @@
-<!-- HOME PAGE -->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Andy Tran | Homepage</title>
-
-    <!-- FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Tenor+Sans&display=swap"
-        rel="stylesheet">
-
-    <!-- CSS -->
-    <style>
-        /* ====================
-            Variables
-        ==================== */
-        :root {
-            --blue-ncs: #2cb6f1;
-            --link: #06d6a0ff;
-            --call_to_action: #ef476fff;
-            --hover: #ffd166ff;
-            --background: #002232;
-
-            --text-light: #f9f9f9;
-        }
-
-        /* ====================
-            Base Styles
-        ==================== */
-        body {
-            background-color: #043146;
-            font-family: 'Open Sans', Arial, sans-serif;
-            color: var(--text-light);
-            margin: 0;
-            margin-bottom: 10px;
-            padding: 0;
-        }
-
-        footer {
-            background-color: var(--background);
-            text-align: center;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            padding-bottom: 20px;
-        }
-
-        footer a {
-            margin-bottom: 100px;
-            padding: 5px 10px;
-            background-color: var(--link);
-            border-radius: 7px;
-        }
-
-        /* ====================
-            Typography
-        ==================== */
-        h2 {
-            margin-bottom: 8px;
-        }
-
-        /* ====================
-            Layout - Banner
-        ==================== */
-        #header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 80px;
-            margin: 0px;
-            padding-left: 10%;
-            background-color: var(--background);
-        }
-
-        .banner {
-            color: var(--blue-ncs);
-        }
-
-        .banner-nav {
-            text-align: right;
-        }
-
-        .banner-nav a {
-            margin: 10px;
-            padding: 5px 10px;
-            background-color: var(--link);
-            border-radius: 7px;
-        }
-
-        .profile-img {
-            width: 100px;
-            vertical-align: middle;
-        }
-
-        /* ====================
-            Layout - Body
-        ==================== */
-        .main-wrapper {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        #welcome {
-            margin: 20px auto;
-            text-align: center;
-        }
-
-        .container {
-            margin: 10px auto;
-            padding: 5px 20px;
-            max-width: 500px;
-            background-color: #2cb6f1;
-            border-radius: 5px;
-        }
-
-        /* ====================
-            Components
-        ==================== */
-        a {
-            text-decoration: none;
-        }
-
-        a:hover {
-            border-radius: 7px;
-            color: black;
-            background-color: var(--hover);
-            box-shadow: 3px 4px 10px black;
-        }
-
-        a:visited {
-            color: inherit;
-        }
-
-        /* ====================
-            Utilities
-        ==================== */
-        .bold {
-            font-size: 1.2em;
-            font-weight: bold;
-        }
-
-        .center {
-            text-align: center;
-        }
-    </style>
+    <title>Andy Tran | UNCC Homepage</title>
 </head>
-
 <body>
-    <header id="header">
-        <!-- <div data-include="components/header.html"></div> -->
-        <h1 class="banner"><a href="./index.html">Andy Tran</a></h1>
-
-        <nav class="banner-nav">
-            <a href="./index.html">Home</a>
-            <a href="itis3135/index.html">ITIS 3135</a>
-            <a href="itis3135/contract.html">Contract</a>
-            |
-            <a href="itis3135/hobby/" target="_blank">Hobby</a>
+    
+    <header>
+        <h1>Andy Tran | Atomic Tardigrade</h1>
+        <nav>
+            <a href="itis3135/index.html">ITIS-3135</a>
         </nav>
     </header>
+    <main>
+        <h2>Andy Tran's UNC Charlotte Page</h2>
+        <figure>
+            <img 
+                src="itis3135/images/mascot.png" 
+                alt="AI rendition of a carton tardigrade holding a chemical flask."
+                width="250">
+            <figcaption>
+                Atomic Tardigrade Mascot
+            </figcaption>
+        </figure>
 
-    <div class="main-wrapper">
-        <main>
-            <section id="welcome" class="container">
-                <h2>Welcome to the Angry Tiger's Page!</h2>
-                <hr>
-                <p>Hi, my name is Andy!
-                    This is my second semester at UNC Charlotte
-                    and so far, I love the atmosphere on campus.
-                    Being able to see so many like-minded people inspires me to continue working hard.</p>
-            </section>
+        <p>Welcome to my personal page! I am a junior in my second semester at UNCC majoring in Computer Science with a focus in Cybersecurity.</p>
+        <p>About Me!</p>
+        <ul>
+            <li>Personal Background: I've moved to Charlotte in 2012 from a small town and have loved it since!</li>
+            <li>Professional Background: I've worked in customer service and now warehouse logistics.</li>
+            <li>Academic Background: I got my associates at CPCC before transferring to UNC Charlotte.</li>
+            <li>Primary Work Computer & Location: Home on a Windows 11 desktop.</li>
+            <li>Backup Work Computer & Location: Public transit on a Macbook.</li>
+        </ul>
 
-            <section id="classes" class="container">
-                <h2 class="center bold">Current Courses</h2>
-                <hr>
-                <p class="course">ITIS 3135 - Front End Web Development
-                    <br>
-                    <a href="itis3135/">Click to go to my course page!</a>
-                </p>
-            </section>
+        <p>Current Courses:</p>
+        <ol>
+                <li>ITIS 3135 - Front-End Web Application Development: This is a required course, but I always wanted to learn how to make websites.</li>
+                <li>MAT 1241 - Calculus 1: Another required course, but I feel like understanding math concepts helps so much with programming. At least in terms of remembering variables.</li>
+                <li>ITIS 4214 - Usable Security and Privacy: Yet another required course! It's very interesting to learn how most people think of security when you take what you've turned into habits for granted.</li>
+            </ol>
 
-        </main>
-    </div>
 
+        <blockquote cite="https://www.goodreads.com/quotes/842526-once-men-turned-their-thinking-over-to-machines-in-the">
+            <p>“Once men turned their thinking over to machines in the hope that this would set them free. But that only permitted other men with machines to enslave them.”</p>
+            <p>- Frank Herbert, <cite>Dune</cite></p>
+        </blockquote>
+
+    </main>
     <footer>
-        <!-- <div data-include="components/footer.html"></div> -->
+        <a href="https://webpages.charlotte.edu/atran55/" target="_blank">
+            CLT Web</a>
+        |
+        <a href="https://github.com/atran55cedu/atran55cedu.github.io" target="_blank">
+            GitHub</a>
+        |
+        <a href="https://atran55cedu.github.io/" target="_blank">
+            GitHub.io</a>
+        |
+        <a href="https://www.freecodecamp.org/atran55uncc" target="_blank">
+            FreeCodeCamp</a>
+        |
+        <a href="https://www.codecademy.com/profiles/data1819022923" target="_blank">
+            CodeCademy</a>
+        |
+        <a href="https://www.linkedin.com/in/andy-tran-748075184/" target="_blank">
+            LinkedIn</a>
 
-        <p>Designed by <a href="itis3135/atran.site/index.html">AT Solutions</a> © 2025</p>
-        <nav id="footer-links">
-            <a href="https://webpages.charlotte.edu/atran55/" target="_blank">CLT Web</a>
-            <a href="https://github.com/atran55cedu/atran55cedu.github.io" target="_blank">GitHub</a>
-            <a href="https://atran55cedu.github.io/" target="_blank">GitHub.io</a>
-            <a href="https://www.freecodecamp.org/atran55uncc" target="_blank">freeCodeCamp</a>
-            <a href="https://www.codecademy.com/profiles/data1819022923" target="_blank">Codecademy</a>
-            <a href="https://www.linkedin.com/in/andy-tran-748075184/">LinkedIn</a>
-        </nav>
+            <!-- ACCUMULUS -->
+        <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
     </footer>
-    <!-- HTML Include  -->
-    <!-- <script src="scripts/HTMLInclude.js"></script> -->
-    <!-- ACCUMULUS -->
-    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
-</body>
 
+</body>
 </html>
