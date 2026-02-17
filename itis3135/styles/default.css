@@ -1,3 +1,15 @@
 /* Pretty colors */
-/* https://coolors.co/c2f9bb-9ad1d4-62c370-cc3363-20063b */
+/* 
+    https://coolors.co/c2f9bb-9ad1d4-62c370-cc3363-20063b 
+*/
+body {
+    background-color: lightgreen;
+}
 
+main {
+    background-color: beige;
+}
+
+h1 {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
