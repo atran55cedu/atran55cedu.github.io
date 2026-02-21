@@ -2,8 +2,25 @@
 /* 
     https://coolors.co/c2f9bb-9ad1d4-62c370-cc3363-20063b 
 */
+
+html {
+    background-color: #62C370;
+}
+
+header {
+    background-color: #62C370;
+    margin: 0px;
+    text-align: center;
+}
+
+footer {
+    background-color: #62C370;
+    text-align: center;
+}
+
 body {
-    background-color: lightgreen;
+    background-color: #C2F9BB;
+    margin: 0px;
 }
 
 main {

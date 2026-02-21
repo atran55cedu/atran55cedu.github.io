@@ -1,0 +1,30 @@
+html {
+    background-color: #003049;
+}
+header nav{
+    text-align: center;
+}
+
+main {
+    background-color: #EAE2B7;
+    border-radius: 5px;
+    padding: 1px 15px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+main a {
+    color: initial;
+}
+
+h1 {
+    color: #F77F00;
+}
+
+a {
+    color: #FCBF49;
+}
+
+footer {
+    text-align: center;
+}
